@@ -72,7 +72,6 @@
   header.scrolled{border-color:var(--border);}
   nav{display:flex; align-items:center; justify-content:space-between; max-width:1180px; margin:0 auto; padding:18px 28px;}
   .logo{display:flex; align-items:center; gap:10px; font-family:'Playfair Display',serif; font-size:21px; letter-spacing:0.08em;}
-  .logo .mark{width:9px;height:9px;border:1px solid var(--fg);transform:rotate(45deg);}
   .navlinks{display:flex; align-items:center; gap:30px; font-size:13.5px; color:var(--muted);}
   .navlinks a{transition:color .2s;}
   .navlinks a:hover{color:var(--fg);}
@@ -103,9 +102,6 @@
   .hero h1 em{font-style:italic; color:var(--muted);}
   .hero p.lead{margin-top:26px; max-width:560px; font-size:17px; line-height:1.65; color:var(--muted);}
   .hero-ctas{display:flex; gap:14px; margin-top:38px; flex-wrap:wrap;}
-  .hero-stats{margin-top:80px; display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); border-top:1px solid var(--border); padding-top:28px; max-width:900px; gap:10px;}
-  .hstat .num{font-family:'Playfair Display',serif; font-size:26px;}
-  .hstat .label{font-size:11px; color:var(--muted-2); text-transform:uppercase; letter-spacing:.08em; margin-top:4px;}
 
   section{padding:110px 0; position:relative; border-top:1px solid var(--border);}
   .eyebrow{display:flex; align-items:center; gap:10px; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted-2); margin-bottom:18px;}
@@ -139,17 +135,6 @@
   .price-card li:first-child{border-top:none;}
   .price-card li::before{content:"—"; color:var(--muted-2); flex-shrink:0;}
 
-  .mentor-wrap{margin-top:50px; display:grid; grid-template-columns:1.1fr 1fr; gap:60px; align-items:start;}
-  @media (max-width:860px){.mentor-wrap{grid-template-columns:1fr;}}
-  .mentor-frame{aspect-ratio:4/5; border:1px solid var(--border); background:radial-gradient(circle at 30% 20%, rgba(255,255,255,0.07), transparent 60%), var(--bg-elev); display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden;}
-  .mentor-frame .initial{font-family:'Playfair Display',serif; font-size:120px; color:rgba(255,255,255,0.12);}
-  .mentor-stats{display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--border); border:1px solid var(--border); margin:30px 0;}
-  .mentor-stats div{background:var(--bg); padding:18px 20px;}
-  .mentor-stats .num{font-family:'Playfair Display',serif; font-size:24px;}
-  .mentor-stats .label{font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted-2); margin-top:3px;}
-  .mentor-list{list-style:none; padding:0; margin:0;}
-  .mentor-list li{font-size:14.5px; color:var(--muted); padding:11px 0; border-top:1px solid var(--border); display:flex; gap:10px;}
-  .mentor-list li::before{content:"◆"; font-size:7px; margin-top:5px; color:var(--muted-2);}
 
   table.schedule{width:100%; border-collapse:collapse; margin-top:50px; font-size:14px;}
   table.schedule th{text-align:left; font-weight:500; color:var(--muted-2); font-size:11px; text-transform:uppercase; letter-spacing:.08em; padding:12px 14px; border-bottom:1px solid var(--border-2);}
@@ -177,73 +162,6 @@
   .foot-links{display:flex; gap:20px; flex-wrap:wrap;}
   .foot-legal{margin-top:30px; border-top:1px solid var(--border); padding-top:22px; font-size:12px; line-height:1.6;}
 
-  #dashboard{background:var(--bg-elev);}
-  .dash-shell{border:1px solid var(--border); background:var(--bg); margin-top:50px;}
-  .dash-tabs{display:flex; border-bottom:1px solid var(--border); overflow-x:auto;}
-  .dash-tab{padding:16px 24px; font-size:13px; color:var(--muted); cursor:pointer; white-space:nowrap; border-bottom:2px solid transparent; transition:color .2s;}
-  .dash-tab:hover{color:var(--fg);}
-  .dash-tab.active{color:var(--fg); border-color:var(--fg);}
-  .dash-body{padding:36px;}
-  @media(max-width:640px){.dash-body{padding:22px 18px;}}
-  .gate{text-align:center; padding:50px 20px; max-width:460px; margin:0 auto;}
-  .gate .ring{width:56px;height:56px;border:1px solid var(--border-2); border-radius:50%; margin:0 auto 22px; display:flex; align-items:center; justify-content:center; font-size:20px;}
-  .gate h3{font-weight:400; font-size:21px; margin-bottom:10px;}
-  .gate p{color:var(--muted); font-size:14px; line-height:1.6; margin-bottom:26px;}
-  .demo-switch{display:flex; gap:8px; justify-content:center; margin-top:26px; flex-wrap:wrap;}
-  .demo-switch button{font-size:11px; padding:7px 13px; border:1px solid var(--border); background:none; color:var(--muted); cursor:pointer; border-radius:20px;}
-  .demo-switch button.active{color:var(--fg); border-color:var(--fg);}
-  .role-badge{font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; padding:4px 10px; border-radius:20px; border:1px solid var(--border-2); color:var(--muted);}
-  .role-badge.premium{color:#fff; border-color:#fff;}
-
-  .lecture-row{display:flex; justify-content:space-between; align-items:center; padding:18px 0; border-top:1px solid var(--border); gap:16px;}
-  .lecture-row:first-child{border-top:none;}
-  .lecture-row .ch{font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--muted-2); min-width:50px;}
-  .lecture-row .meta{flex:1;}
-  .lecture-row h4{font-weight:400; font-size:15px;}
-  .lecture-row .sub{font-size:12px; color:var(--muted-2); margin-top:3px;}
-
-  .admin-form{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:28px;}
-  @media(max-width:560px){.admin-form{grid-template-columns:1fr;}}
-  .admin-form input, .admin-form textarea, select.ipt{
-    background:var(--bg-elev); border:1px solid var(--border); color:var(--fg); padding:11px 13px;
-    font-family:'Inter'; font-size:13.5px; border-radius:3px; width:100%;
-  }
-  .admin-form textarea{grid-column:1/-1; min-height:70px; resize:vertical;}
-  .admin-form input:focus, .admin-form textarea:focus, select.ipt:focus{outline:1px solid var(--accent-dim);}
-
-  .journal-entry{border-top:1px solid var(--border); padding:16px 0;}
-  .journal-entry:first-child{border-top:none;}
-  .journal-entry .je-head{display:flex; justify-content:space-between; font-size:11.5px; color:var(--muted-2); margin-bottom:6px;}
-  .journal-entry p{font-size:14px; color:var(--muted); line-height:1.6; white-space:pre-wrap;}
-  .journal-compose textarea{width:100%; background:var(--bg-elev); border:1px solid var(--border); color:var(--fg); padding:14px; font-family:'Inter'; font-size:14px; min-height:100px; border-radius:3px; resize:vertical;}
-  .member-block{border:1px solid var(--border); margin-bottom:16px;}
-  .member-block summary{padding:14px 18px; cursor:pointer; font-size:13.5px; display:flex; justify-content:space-between; list-style:none;}
-  .member-block summary::-webkit-details-marker{display:none;}
-  .member-block .inner{padding:0 18px 18px;}
-
-  .cal-head{display:flex; align-items:center; justify-content:space-between; margin-bottom:18px;}
-  .cal-head .m{font-family:'Playfair Display',serif; font-size:19px;}
-  .cal-nav{display:flex; gap:8px;}
-  .cal-nav button{background:none; border:1px solid var(--border); color:var(--fg); width:30px; height:30px; border-radius:3px; cursor:pointer;}
-  .cal-grid{display:grid; grid-template-columns:repeat(7,1fr); gap:6px;}
-  .cal-dow{font-size:10.5px; text-align:center; color:var(--muted-2); padding-bottom:6px; text-transform:uppercase;}
-  .cal-cell{aspect-ratio:1; border:1px solid var(--border); border-radius:4px; display:flex; flex-direction:column; align-items:center; justify-content:center; font-size:12.5px; cursor:pointer; color:var(--muted); position:relative; transition:all .15s;}
-  .cal-cell.empty{border:none; cursor:default;}
-  .cal-cell.open:hover{border-color:var(--accent-dim); color:var(--fg); background:rgba(255,255,255,0.03);}
-  .cal-cell.booked-you{background:var(--fg); color:#060606; border-color:var(--fg);}
-  .cal-cell.booked-other{background:var(--bg-elev-2); color:var(--muted-2); cursor:not-allowed;}
-  .cal-cell.blocked{background:repeating-linear-gradient(45deg,var(--bg-elev),var(--bg-elev) 4px,var(--bg-elev-2) 4px,var(--bg-elev-2) 8px); color:var(--muted-2); cursor:not-allowed;}
-  .cal-cell .dotmark{width:4px;height:4px;border-radius:50%;background:currentColor;margin-top:3px;}
-  .cal-legend{display:flex; gap:18px; margin-top:20px; flex-wrap:wrap; font-size:11.5px; color:var(--muted);}
-  .cal-legend span{display:inline-flex; align-items:center; gap:6px;}
-  .cal-legend i{width:11px;height:11px;border-radius:3px; border:1px solid var(--border);}
-
-  .toast{position:fixed; bottom:26px; left:50%; transform:translateX(-50%) translateY(20px); opacity:0; background:var(--fg); color:#060606; padding:13px 22px; border-radius:4px; font-size:13px; z-index:999; transition:all .3s; pointer-events:none;}
-  .toast.show{opacity:1; transform:translateX(-50%) translateY(0);}
-
-  .code-note{font-size:11px; color:var(--muted-2); border:1px dashed var(--border-2); padding:12px 14px; border-radius:4px; margin-top:10px; line-height:1.6;}
-  .code-note b{color:var(--muted);}
-
   @media (prefers-color-scheme: light){ :root:not([data-theme="light"]){} }
 </style>
 </head>
@@ -256,18 +174,16 @@
 
 <header id="siteHeader">
   <nav>
-    <a href="#top" class="logo"><span class="mark"></span>ARETÉ</a>
+    <a href="#top" class="logo">ARETÉ</a>
     <div class="navlinks">
-      <a href="#method">Method</a>
-      <a href="#mentor">Mentor</a>
+      <a href="#strategy">My Strategy</a>
+      <a href="#psychology">Psychology</a>
       <a href="#pricing">Pricing</a>
       <a href="#schedule">Schedule</a>
       <a href="#faq">FAQ</a>
-      <a href="#dashboard">Member Dashboard</a>
     </div>
     <div class="navcta">
-      <a class="btn btn-sm" href="#dashboard">Sign in</a>
-      <a class="btn btn-solid btn-sm" id="discordJoinBtn" href="https://discord.gg/jmJ84ddrt" target="_blank" rel="noopener">Join Discord</a>
+      <a class="btn btn-solid btn-sm" id="discordJoinBtn" href="#pricing">Apply Here</a>
     </div>
   </nav>
 </header>
@@ -276,75 +192,71 @@
 
   <section class="hero" style="border-top:none; padding-bottom:40px;">
     <div class="wrap">
-      <div class="kicker"><span class="dot"></span> Private 1-on-1 desk · seats limited</div>
-      <h1>Trade with <em>areté</em>.<br>One mentor. One method.</h1>
-      <p class="lead">Areté is a private 1-on-1 day-trading mentorship. No courses sitting unfinished, no crowd to get lost in — just a direct line to a mentor who reviews your trades, your journal, and your risk every single week.</p>
+      <div class="kicker"><span class="dot"></span> Private 1-1 seats limited</div>
+      <h1>Trade with <em>Areté</em>.</h1>
+      <p class="lead">Areté is a day-trading community that provides personalized 1-on-1 mentorship for traders at all experience levels, from beginners to experienced futures traders.</p>
       <div class="hero-ctas">
-        <a class="btn btn-solid" id="heroJoinBtn" href="https://discord.gg/jmJ84ddrt" target="_blank" rel="noopener">Request a seat</a>
-        <a class="btn" href="#dashboard">Member sign-in</a>
-      </div>
-      <div class="hero-stats">
-        <div class="hstat"><div class="num" id="statMembers">—</div><div class="label">Active members</div></div>
-        <div class="hstat"><div class="num" id="statSessions">—</div><div class="label">1-on-1 sessions logged</div></div>
-        <div class="hstat"><div class="num" id="statWinrate">—</div><div class="label">Avg. member win rate</div></div>
-        <div class="hstat"><div class="num" id="statHours">—</div><div class="label">Hours live on tape</div></div>
+        <a class="btn btn-solid" id="heroJoinBtn" href="#pricing">Request a seat</a>
       </div>
     </div>
   </section>
 
-  <section id="method">
+  <section id="strategy">
     <div class="wrap">
-      <div class="eyebrow"><span class="n">01</span> The Areté Standard</div>
-      <h2 class="title">A quiet, repeatable process —<span class="fade"> not a personality to copy.</span></h2>
-      <p class="sub">Every 1-on-1 week runs through the same four checkpoints, so progress is something we can actually measure together instead of guess at.</p>
+      <div class="eyebrow"><span class="n">01</span> My Strategy</div>
+      <h2 class="title">Learn my advanced<span class="fade"> AMD Strategy.</span></h2>
+      <p class="sub">My advanced AMD (Accumulation–Manipulation–Distribution) trading strategy is taught through a structured lecture vault you work through in order, with homework assigned after each one so the concept actually sticks before you trade it live.</p>
       <div class="method-grid">
         <div class="method-card">
-          <div class="idx"><span>01</span><span>Prep</span></div>
-          <h3>Build your map</h3>
-          <p>Before the bell, we write down the levels, the bias, and the one setup that invalidates the day — together, on a call or in your channel.</p>
+          <div class="idx"><span>01</span><span>Watch</span></div>
+          <h3>Lecture videos</h3>
+          <p>Each stage of my Advanced AMD strategy gets its own lecture, broken into short, rewatchable segments in the vault.</p>
         </div>
         <div class="method-card">
-          <div class="idx"><span>02</span><span>Execute</span></div>
-          <h3>Trade the plan</h3>
-          <p>Entries, stops, and size are decided before the candle prints. We work on removing mid-trade improvising, one session at a time.</p>
+          <div class="idx"><span>02</span><span>Apply</span></div>
+          <h3>Homework, every lecture</h3>
+          <p>Every lecture comes with an assignment: mark up charts, identify the phase, or journal a setup. I review it before you move to the next one.</p>
         </div>
         <div class="method-card">
-          <div class="idx"><span>03</span><span>Journal</span></div>
-          <h3>Log it, honestly</h3>
-          <p>Every session goes in your private journal. I read it. That accountability is the actual product — not another PDF.</p>
+          <div class="idx"><span>03</span><span>Trade</span></div>
+          <h3>See it live</h3>
+          <p>See my strategy traded live and put into practice for better understanding.</p>
         </div>
         <div class="method-card">
-          <div class="idx"><span>04</span><span>Review</span></div>
-          <h3>Weekly 1-on-1</h3>
-          <p>We sit down weekly, screen-share your charts and journal, and fix the one habit that's actually costing you money.</p>
+          <span class="pill" style="margin-bottom:14px; display:inline-block;">1-1 Only</span>
+          <div class="idx"><span>04</span><span>Refine</span></div>
+          <h3>1-on-1 or journal review</h3>
+          <p>Depending on your tier, we go over your homework and journal weekly in a private call, or you get feedback directly in your journal.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="mentor">
+  <section id="psychology">
     <div class="wrap">
-      <div class="eyebrow"><span class="n">02</span> Your mentor</div>
-      <h2 class="title">One operator.<span class="fade"> No handoff, no assistants.</span></h2>
-      <div class="mentor-wrap">
-        <div>
-          <div class="mentor-frame"><span class="initial">A</span></div>
-          <div class="mentor-stats">
-            <div><div class="num">—</div><div class="label">Years full-time</div></div>
-            <div><div class="num">—</div><div class="label">Funded accounts</div></div>
-            <div><div class="num">—</div><div class="label">Hours live</div></div>
-            <div><div class="num">—</div><div class="label">Students mentored</div></div>
-          </div>
+      <div class="eyebrow"><span class="n">02</span> Psychology</div>
+      <h2 class="title">Trading is a mental game —<span class="fade"> we train for that too.</span></h2>
+      <p class="sub">Strategy only gets you so far. Most losses come from the moment after the plan breaks — revenge trades, moved stops, oversized positions. Psychology work is built into the mentorship, not sold as a separate add-on.</p>
+      <div class="method-grid">
+        <div class="method-card">
+          <div class="idx"><span>01</span><span>Identify</span></div>
+          <h3>Spot your patterns</h3>
+          <p>We find the specific habits that are actually costing you — revenge trading, moving stops, oversizing after a loss — by reading it straight out of your journal.</p>
         </div>
-        <div>
-          <p class="sub" style="max-width:520px;">Areté is run directly by its founder — the same person calling the open, reading your journal, and showing up to your weekly call. Fill in your own background below.</p>
-          <ul class="mentor-list" style="margin-top:26px;">
-            <li>Full-time trader, NQ futures — [years] years</li>
-            <li>Funded across [prop firms you've passed]</li>
-            <li>Hosts weekly 1-on-1 review calls personally</li>
-            <li>Replies to member journals directly, no team</li>
-          </ul>
-          <a class="btn btn-sm" style="margin-top:28px;" href="#" target="_blank">Follow on [platform]</a>
+        <div class="method-card">
+          <div class="idx"><span>02</span><span>Reframe</span></div>
+          <h3>Change the story</h3>
+          <p>Most self-sabotage comes from a belief, not a lack of skill. We work through what's actually driving the impulsive decision in the moment.</p>
+        </div>
+        <div class="method-card">
+          <div class="idx"><span>03</span><span>Build</span></div>
+          <h3>Daily discipline habits</h3>
+          <p>Simple routines and checklists — reviewed in your daily market recap — that keep emotion out of execution before it costs you money.</p>
+        </div>
+        <div class="method-card">
+          <div class="idx"><span>04</span><span>Support</span></div>
+          <h3>Ongoing accountability</h3>
+          <p>Regular check-ins so a slip back into old habits gets caught in days, not months.</p>
         </div>
       </div>
     </div>
@@ -353,38 +265,37 @@
   <section id="pricing">
     <div class="wrap">
       <div class="eyebrow"><span class="n">03</span> Pricing</div>
-      <h2 class="title">Two roles.<span class="fade"> Same mentor, different depth.</span></h2>
-      <p class="sub">Roles are granted inside Discord after you apply. Student and Premium mirror your access on the site and in the member dashboard below.</p>
+      <h2 class="title">Choose your path.</h2>
+      <p class="sub">Roles are granted inside Discord after you apply.</p>
       <div class="pricing-grid">
         <div class="price-card">
           <span class="tag">Student</span>
           <div class="role">Discord role · Student</div>
-          <h3>Foundation</h3>
-          <div class="desc">For traders building the habit before scaling size.</div>
-          <div class="amount">$—<span> one-time</span></div>
+          <h3>Student</h3>
+          <div class="desc">For traders learning the strategy in the group setting.</div>
+          <div class="amount">$350<span> one-time</span></div>
           <ul>
-            <li>Private Student channels</li>
-            <li>Lecture vault access</li>
-            <li>Personal journal reviewed monthly</li>
-            <li>Group review calls</li>
-            <li>Booking access for open office-hours</li>
+            <li>Full lecture vault access</li>
+            <li>Group calls and live trading sessions</li>
+            <li>Your own private journal</li>
+            <li>Daily market recap breakdowns of executed trades to build the discipline and mindset to stop sabotaging your own trading</li>
+            <li>Not prioritized over 1-on-1 Mentorship members for calls or reviews</li>
           </ul>
-          <a class="btn" href="https://discord.gg/jmJ84ddrt" target="_blank" rel="noopener">Apply as Student</a>
+          <a class="btn" id="studentCheckoutBtn" href="https://whop.com/arete-1f3a/lifetime-02-cd79/" target="_blank" rel="noopener">Apply as Student</a>
         </div>
         <div class="price-card premium">
-          <span class="tag">Premium</span>
-          <div class="role">Discord role · Premium</div>
-          <h3>1-on-1 Desk</h3>
+          <span class="tag">1-on-1</span>
+          <div class="role">Discord role · 1-on-1 Mentorship</div>
+          <h3>1-on-1 Mentorship</h3>
           <div class="desc">Full mentorship — your trades, your journal, every week.</div>
-          <div class="amount">$—<span> / month</span></div>
+          <div class="amount">$800<span> one-time</span></div>
           <ul>
             <li>Everything in Student</li>
-            <li>Weekly private 1-on-1 call</li>
-            <li>Priority booking calendar access</li>
-            <li>Journal reviewed weekly, direct notes</li>
-            <li>Direct DM line</li>
+            <li>One private 1-on-1 call per week</li>
+            <li>Weekly journal reviews</li>
+            <li>Lecture homework reviewed directly</li>
           </ul>
-          <a class="btn btn-solid" href="https://discord.gg/jmJ84ddrt" target="_blank" rel="noopener">Apply for Premium</a>
+          <a class="btn btn-solid" id="oneOnOneCheckoutBtn" href="https://whop.com/arete-1f3a/arete-8e/" target="_blank" rel="noopener">Apply for 1-on-1 Mentorship</a>
         </div>
       </div>
     </div>
@@ -393,17 +304,18 @@
   <section id="schedule">
     <div class="wrap">
       <div class="eyebrow"><span class="n">04</span> Live schedule</div>
-      <h2 class="title">The week has<span class="fade"> a real rhythm.</span></h2>
-      <p class="sub">Edit this table to match your actual week — opens, debriefs, and review calls.</p>
+      <h2 class="title">Live trading<span class="fade"> every weekday except Tuesday and Thursday.</span></h2>
+      <p class="sub">Tuesdays, Thursdays, and weekends are off days — no live session. Monday, Wednesday, and Friday, the desk is live.</p>
       <table class="schedule">
         <thead><tr><th>Day</th><th>Time</th><th>Event</th><th>Type</th></tr></thead>
         <tbody>
-          <tr><td>Mon</td><td class="ev">08:45 EST</td><td class="ev">Weekly bias — pre-open</td><td><span class="pill">Open</span></td></tr>
-          <tr><td>Mon–Thu</td><td class="ev">09:30 EST</td><td class="ev">Live open, narrated</td><td><span class="pill">Open</span></td></tr>
-          <tr><td>Wed</td><td class="ev">20:00 EST</td><td class="ev">Lecture drop</td><td><span class="pill">Vault</span></td></tr>
-          <tr><td>Fri</td><td class="ev">15:50 EST</td><td class="ev">Close debrief + weekly recap</td><td><span class="pill">Close</span></td></tr>
-          <tr><td>Weekly</td><td class="ev">By booking</td><td class="ev">Your 1-on-1 call</td><td><span class="pill">1-on-1</span></td></tr>
-          <tr><td>Sun</td><td class="ev">11:00 EST</td><td class="ev">Journal + cohort review</td><td><span class="pill">Review</span></td></tr>
+          <tr><td>Monday</td><td class="ev">09:30 EST</td><td class="ev">Live trading, narrated</td><td><span class="pill">Live</span></td></tr>
+          <tr><td>Tuesday</td><td class="ev">—</td><td class="ev">No live session</td><td><span class="pill">Off</span></td></tr>
+          <tr><td>Wednesday</td><td class="ev">09:30 EST</td><td class="ev">Live trading, narrated</td><td><span class="pill">Live</span></td></tr>
+          <tr><td>Thursday</td><td class="ev">—</td><td class="ev">No live session</td><td><span class="pill">Off</span></td></tr>
+          <tr><td>Friday</td><td class="ev">09:30 EST</td><td class="ev">Live trading, narrated</td><td><span class="pill">Live</span></td></tr>
+          <tr><td>Weekend</td><td class="ev">—</td><td class="ev">No live session</td><td><span class="pill">Off</span></td></tr>
+          <tr><td>Weekly</td><td class="ev">By booking</td><td class="ev">Your 1-on-1 call (1-on-1 Mentorship)</td><td><span class="pill">1-on-1</span></td></tr>
         </tbody>
       </table>
     </div>
@@ -419,16 +331,8 @@
           <div class="faq-a"><p>No — but you should be comfortable on a sim or small size. Replace this with your real onboarding requirement.</p></div>
         </div>
         <div class="faq-item">
-          <div class="faq-q"><h4>What's the difference between Student and Premium?</h4><span class="plus">+</span></div>
-          <div class="faq-a"><p>Student covers the vault, journaling, and group calls. Premium adds the weekly private 1-on-1 and priority booking. Edit the pricing cards above to match your real offer.</p></div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q"><h4>How does Discord role access work?</h4><span class="plus">+</span></div>
-          <div class="faq-a"><p>After you apply and your role is granted in Discord, you'd sign in here with Discord so the site can check your role. See the note in the Member Dashboard section — that live check needs a real backend to be connected.</p></div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q"><h4>Can I see my own journal history?</h4><span class="plus">+</span></div>
-          <div class="faq-a"><p>Yes — every entry you log is private to you and the mentor. Only the mentor (owner) can see every member's journal; members only ever see their own.</p></div>
+          <div class="faq-q"><h4>What's the difference between Student and 1-on-1 Mentorship?</h4><span class="plus">+</span></div>
+          <div class="faq-a"><p>Student covers the full lecture vault, group calls, live trading sessions, and your own journal. 1-on-1 Mentorship adds a private weekly call, weekly journal reviews, and direct homework review — Student members are never prioritized over 1-on-1 members for calls or reviews.</p></div>
         </div>
         <div class="faq-item">
           <div class="faq-q"><h4>Do you guarantee results?</h4><span class="plus">+</span></div>
@@ -438,120 +342,13 @@
     </div>
   </section>
 
-  <section id="dashboard">
-    <div class="wrap">
-      <div class="eyebrow"><span class="n">06</span> Member dashboard</div>
-      <h2 class="title">Lectures, journal,<span class="fade"> and your 1-on-1 calendar.</span></h2>
-      <p class="sub">This panel is fully wired up with working demo data so you can click through the experience. Swap the demo layer for your real backend when you're ready — see the note at the bottom.</p>
-
-      <div class="dash-shell">
-        <div class="dash-tabs" id="dashTabs">
-          <div class="dash-tab active" data-tab="lectures">Lectures</div>
-          <div class="dash-tab" data-tab="journal">Journal</div>
-          <div class="dash-tab" data-tab="booking">1-on-1 Booking</div>
-          <div class="dash-tab" data-tab="admin">Admin</div>
-          <div style="flex:1"></div>
-          <div class="dash-tab" id="accountTab" style="color:var(--muted-2);"></div>
-        </div>
-        <div class="dash-body">
-
-          <div id="gateView" class="gate">
-            <div class="ring">◆</div>
-            <h3>Sign in to continue</h3>
-            <p>Real access is meant to run through Discord OAuth, checking your Student or Premium role. That requires a live backend this static page can't hold securely — so for now, preview each view below.</p>
-            <div class="demo-switch" id="demoSwitch">
-              <button data-role="none">Signed out</button>
-              <button data-role="student">Preview: Student</button>
-              <button data-role="premium">Preview: Premium</button>
-              <button data-role="owner">Preview: Owner (you)</button>
-            </div>
-            <div class="code-note">
-              <b>Wiring this up for real:</b> swap this gate for a "Sign in with Discord" OAuth redirect on your own server, exchange the code for the member's guild roles, and set their Student/Premium/Owner status from there instead of the buttons above.
-            </div>
-          </div>
-
-          <div id="appViews" style="display:none;">
-
-            <div class="tabpanel" id="panel-lectures">
-              <div id="lectureList"></div>
-            </div>
-
-            <div class="tabpanel" id="panel-journal" style="display:none;">
-              <div id="journalMemberView">
-                <h3 style="font-weight:400; font-size:17px; margin-bottom:4px;">Your journal</h3>
-                <p style="color:var(--muted); font-size:13px; margin-bottom:20px;">Private between you and the mentor.</p>
-                <div class="journal-compose">
-                  <textarea id="journalInput" placeholder="Today's setup, what worked, what didn't..."></textarea>
-                  <div style="display:flex; justify-content:flex-end; margin-top:10px;">
-                    <button class="btn btn-sm btn-solid" id="journalSaveBtn">Log entry</button>
-                  </div>
-                </div>
-                <div id="journalEntries" style="margin-top:26px;"></div>
-              </div>
-            </div>
-
-            <div class="tabpanel" id="panel-booking" style="display:none;">
-              <div class="cal-head">
-                <div class="m" id="calMonthLabel"></div>
-                <div class="cal-nav">
-                  <button id="calPrev">‹</button>
-                  <button id="calNext">›</button>
-                </div>
-              </div>
-              <div class="cal-grid" id="calGrid"></div>
-              <div class="cal-legend">
-                <span><i style="background:var(--bg);"></i> Open</span>
-                <span><i style="background:var(--fg);"></i> Your booking</span>
-                <span><i style="background:var(--bg-elev-2);"></i> Booked by another member</span>
-                <span><i style="background:repeating-linear-gradient(45deg,#111,#111 3px,#1a1a1a 3px,#1a1a1a 6px);"></i> Reserved / blocked by mentor</span>
-              </div>
-            </div>
-
-            <div class="tabpanel" id="panel-admin" style="display:none;">
-              <div id="adminGate">
-                <p style="color:var(--muted); font-size:13.5px;">Admin tools are visible to the Owner role only.</p>
-              </div>
-              <div id="adminTools" style="display:none;">
-                <h3 style="font-weight:400; font-size:17px; margin-bottom:16px;">Add a lecture</h3>
-                <div class="admin-form">
-                  <input type="text" id="admLecChapter" placeholder="Chapter (e.g. 01)">
-                  <input type="text" id="admLecTitle" placeholder="Title">
-                  <input type="text" id="admLecMeta" placeholder="Meta (e.g. 6 lessons · 1h 40m)">
-                  <input type="text" id="admLecUrl" placeholder="Video / vault URL">
-                  <textarea id="admLecDesc" placeholder="Short description"></textarea>
-                </div>
-                <button class="btn btn-sm btn-solid" id="admLecAdd">Add lecture</button>
-
-                <h3 style="font-weight:400; font-size:17px; margin:34px 0 16px;">Block a date</h3>
-                <div class="admin-form" style="grid-template-columns:1fr 1fr auto;">
-                  <input type="date" id="admBlockDate">
-                  <input type="text" id="admBlockNote" placeholder="Note (optional)">
-                  <button class="btn btn-sm" id="admBlockAdd">Block date</button>
-                </div>
-
-                <h3 style="font-weight:400; font-size:17px; margin:34px 0 10px;">All member journals</h3>
-                <p style="color:var(--muted-2); font-size:12.5px; margin-bottom:16px;">Visible to Owner only. Members only ever see their own entries.</p>
-                <div id="adminJournals"></div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-      <div class="code-note" style="max-width:720px; margin-top:22px;">
-        <b>Demo data note:</b> lectures, journal entries, and bookings in this preview are stored in your browser only (localStorage), and "other members" are simulated so the Owner view has something to show. Connecting Discord OAuth plus a real database would replace this layer without changing any of the surrounding design.
-      </div>
-    </div>
-  </section>
-
   <section class="cta-band">
     <div class="wrap">
-      <div class="eyebrow" style="justify-content:center;"><span class="n">07</span> Apply</div>
-      <h2 class="serif">Show up tomorrow.</h2>
-      <p class="sub" style="margin:16px auto 0; text-align:center;">Apply in Discord, get your role, and join the next 1-on-1 call.</p>
+      <div class="eyebrow" style="justify-content:center;"><span class="n">06</span> Apply</div>
+      <h2 class="serif">Join Areté</h2>
+      <p class="sub" style="margin:16px auto 0; text-align:center;">Apply here and join the next 1-on-1 call.</p>
       <div class="ctas">
-        <a class="btn btn-solid" href="https://discord.gg/jmJ84ddrt" target="_blank" rel="noopener">Apply on Discord</a>
-        <a class="btn" href="#dashboard">Member dashboard</a>
+        <a class="btn btn-solid" href="#pricing">Apply Here</a>
       </div>
     </div>
   </section>
@@ -562,15 +359,14 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <div class="logo" style="margin-bottom:12px;"><span class="mark"></span>ARETÉ</div>
-        <p style="max-width:300px; color:var(--muted-2);">A private 1-on-1 day-trading mentorship. Live sessions, honest journaling, one mentor.</p>
+        <div class="logo" style="margin-bottom:12px;">ARETÉ</div>
+        <p style="max-width:300px; color:var(--muted-2);">A private 1-on-1 day-trading mentorship. Live sessions, a proven strategy, one mentor.</p>
       </div>
       <div class="foot-links">
-        <a href="#method">Method</a>
-        <a href="#mentor">Mentor</a>
+        <a href="#strategy">My Strategy</a>
+        <a href="#psychology">Psychology</a>
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
-        <a href="#dashboard">Dashboard</a>
       </div>
     </div>
     <div class="foot-legal">
@@ -580,7 +376,6 @@
   </div>
 </footer>
 
-<div class="toast" id="toast"></div>
 
 <script>
 (function(){
@@ -673,243 +468,6 @@ document.querySelectorAll('.faq-item').forEach(item => {
   });
 });
 
-function animateNum(el, target, suffix){
-  let cur = 0;
-  const step = Math.max(1, Math.round(target/40));
-  const int = setInterval(() => {
-    cur += step;
-    if(cur >= target){ cur = target; clearInterval(int); }
-    el.textContent = cur + (suffix||'');
-  }, 30);
-}
-window.addEventListener('load', () => {
-  animateNum(document.getElementById('statMembers'), 46);
-  animateNum(document.getElementById('statSessions'), 312);
-  animateNum(document.getElementById('statWinrate'), 61, '%');
-  animateNum(document.getElementById('statHours'), 980);
-});
-
-function toast(msg){
-  const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.classList.add('show');
-  setTimeout(()=>t.classList.remove('show'), 2200);
-}
-
-const LS_KEY = 'arete_demo_v1';
-function loadDB(){
-  let db = JSON.parse(localStorage.getItem(LS_KEY) || 'null');
-  if(!db){
-    db = {
-      lectures: [
-        {ch:'00', title:'The Areté Standard', meta:'12 lessons · 4h 10m', url:'#', desc:'The core framework — prep, execution, journaling, and review.'},
-        {ch:'01', title:'Risk & sizing', meta:'6 lessons · 2h 05m', url:'#', desc:'Position sizing as a function of conviction and daily loss limits.'},
-        {ch:'02', title:'Trader mindset', meta:'7 lessons · 2h 40m', url:'#', desc:'Tilt detection and staying flat after a stop.'}
-      ],
-      journals: {
-        student: [{date:'2026-09-29', text:'Took the long on the sweep, sized small, worked out. Journaling this to keep sizing honest.'}],
-        premium: [{date:'2026-10-02', text:'Chopped around the open, sat on hands. Good discipline day even with no trade.'}],
-        owner: []
-      },
-      bookings: {},
-      blocked: {}
-    };
-    saveDB(db);
-  }
-  return db;
-}
-function saveDB(db){ localStorage.setItem(LS_KEY, JSON.stringify(db)); }
-
-let currentRole = 'none';
-const roleLabels = {none:'Signed out', student:'Student', premium:'Premium', owner:'Owner'};
-
-document.getElementById('demoSwitch').addEventListener('click', (e) => {
-  const btn = e.target.closest('button');
-  if(!btn) return;
-  setRole(btn.dataset.role);
-});
-
-function setRole(role){
-  currentRole = role;
-  document.querySelectorAll('#demoSwitch button').forEach(b => b.classList.toggle('active', b.dataset.role === role));
-  const accountTab = document.getElementById('accountTab');
-  if(role === 'none'){
-    document.getElementById('gateView').style.display = 'block';
-    document.getElementById('appViews').style.display = 'none';
-    accountTab.textContent = '';
-  } else {
-    document.getElementById('gateView').style.display = 'none';
-    document.getElementById('appViews').style.display = 'block';
-    accountTab.innerHTML = 'Role: <span class="role-badge ' + (role==='premium'||role==='owner'?'premium':'') + '">' + roleLabels[role] + '</span>';
-    renderAll();
-  }
-  document.querySelector('#panel-admin').style.display = (activeTab === 'admin') ? 'block' : 'none';
-  toggleAdminVisibility();
-}
-
-let activeTab = 'lectures';
-document.getElementById('dashTabs').addEventListener('click', (e) => {
-  const tab = e.target.closest('.dash-tab');
-  if(!tab || !tab.dataset.tab) return;
-  activeTab = tab.dataset.tab;
-  document.querySelectorAll('.dash-tab').forEach(t => t.classList.toggle('active', t === tab));
-  document.querySelectorAll('.tabpanel').forEach(p => p.style.display = 'none');
-  document.getElementById('panel-' + activeTab).style.display = 'block';
-  if(activeTab === 'booking') renderCalendar();
-});
-
-function toggleAdminVisibility(){
-  const isOwner = currentRole === 'owner';
-  document.getElementById('adminGate').style.display = isOwner ? 'none' : 'block';
-  document.getElementById('adminTools').style.display = isOwner ? 'block' : 'none';
-}
-
-function renderLectures(){
-  const db = loadDB();
-  const wrap = document.getElementById('lectureList');
-  wrap.innerHTML = db.lectures.map(l => `
-    <div class="lecture-row">
-      <div class="ch mono">Ch. ${l.ch}</div>
-      <div class="meta">
-        <h4>${escapeHtml(l.title)}</h4>
-        <div class="sub">${escapeHtml(l.meta)} — ${escapeHtml(l.desc)}</div>
-      </div>
-      <a class="btn btn-sm" href="${l.url}" target="_blank">Watch</a>
-    </div>
-  `).join('');
-}
-
-function renderJournal(){
-  const db = loadDB();
-  renderJournalEntries(db.journals[currentRole] || [], 'journalEntries');
-}
-function renderJournalEntries(entries, elId){
-  const el = document.getElementById(elId);
-  if(!entries.length){ el.innerHTML = '<p style="color:var(--muted-2); font-size:13px;">No entries yet.</p>'; return; }
-  el.innerHTML = entries.slice().reverse().map(e => `
-    <div class="journal-entry">
-      <div class="je-head"><span>${e.date}</span></div>
-      <p>${escapeHtml(e.text)}</p>
-    </div>
-  `).join('');
-}
-document.getElementById('journalSaveBtn').addEventListener('click', () => {
-  const input = document.getElementById('journalInput');
-  if(!input.value.trim()) return;
-  if(currentRole === 'none') return;
-  const db = loadDB();
-  if(!db.journals[currentRole]) db.journals[currentRole] = [];
-  db.journals[currentRole].push({date: new Date().toISOString().slice(0,10), text: input.value.trim()});
-  saveDB(db);
-  input.value = '';
-  renderJournal();
-  renderAdminJournals();
-  toast('Journal entry logged');
-});
-
-function renderAdminJournals(){
-  const db = loadDB();
-  const wrap = document.getElementById('adminJournals');
-  const names = {student:'Member — Student role', premium:'Member — Premium role', owner:'You (Owner)'};
-  wrap.innerHTML = Object.keys(db.journals).map(key => `
-    <details class="member-block">
-      <summary>${names[key] || key} <span style="color:var(--muted-2);">${(db.journals[key]||[]).length} entries</span></summary>
-      <div class="inner" id="adm-journal-${key}"></div>
-    </details>
-  `).join('');
-  Object.keys(db.journals).forEach(key => renderJournalEntries(db.journals[key]||[], 'adm-journal-' + key));
-}
-document.getElementById('admLecAdd').addEventListener('click', () => {
-  const ch = document.getElementById('admLecChapter').value.trim() || '0' + (loadDB().lectures.length);
-  const title = document.getElementById('admLecTitle').value.trim();
-  const meta = document.getElementById('admLecMeta').value.trim();
-  const url = document.getElementById('admLecUrl').value.trim() || '#';
-  const desc = document.getElementById('admLecDesc').value.trim();
-  if(!title) return toast('Add a title first');
-  const db = loadDB();
-  db.lectures.push({ch, title, meta, url, desc});
-  saveDB(db);
-  ['admLecChapter','admLecTitle','admLecMeta','admLecUrl','admLecDesc'].forEach(id => document.getElementById(id).value = '');
-  renderLectures();
-  toast('Lecture added');
-});
-document.getElementById('admBlockAdd').addEventListener('click', () => {
-  const date = document.getElementById('admBlockDate').value;
-  const note = document.getElementById('admBlockNote').value.trim();
-  if(!date) return toast('Pick a date first');
-  const db = loadDB();
-  db.blocked[date] = note || 'Reserved';
-  saveDB(db);
-  document.getElementById('admBlockDate').value = '';
-  document.getElementById('admBlockNote').value = '';
-  renderCalendar();
-  toast('Date blocked');
-});
-
-let calDate = new Date();
-function renderCalendar(){
-  const db = loadDB();
-  const label = document.getElementById('calMonthLabel');
-  const grid = document.getElementById('calGrid');
-  const year = calDate.getFullYear();
-  const month = calDate.getMonth();
-  label.textContent = calDate.toLocaleString('default',{month:'long', year:'numeric'});
-
-  const firstDay = new Date(year, month, 1).getDay();
-  const daysInMonth = new Date(year, month+1, 0).getDate();
-
-  let html = ['S','M','T','W','T','F','S'].map(d => `<div class="cal-dow">${d}</div>`).join('');
-  for(let i=0;i<firstDay;i++) html += '<div class="cal-cell empty"></div>';
-
-  const todayStr = new Date().toISOString().slice(0,10);
-
-  for(let d=1; d<=daysInMonth; d++){
-    const dateStr = `${year}-${String(month+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
-    const booking = db.bookings[dateStr];
-    const blocked = db.blocked[dateStr];
-    let cls = 'cal-cell open';
-    let mark = '';
-    if(blocked){ cls = 'cal-cell blocked'; }
-    else if(booking){
-      cls = booking.by === currentRole ? 'cal-cell booked-you' : 'cal-cell booked-other';
-      mark = '<div class="dotmark"></div>';
-    } else if(dateStr < todayStr){
-      cls = 'cal-cell empty';
-    }
-    html += `<div class="${cls}" data-date="${dateStr}">${d}${mark}</div>`;
-  }
-  grid.innerHTML = html;
-
-  grid.querySelectorAll('.cal-cell.open').forEach(cell => {
-    cell.addEventListener('click', () => {
-      if(currentRole === 'none') return;
-      const date = cell.dataset.date;
-      const db2 = loadDB();
-      if(db2.bookings[date] || db2.blocked[date]) return;
-      db2.bookings[date] = {by: currentRole, note: roleLabels[currentRole] + ' 1-on-1 call'};
-      saveDB(db2);
-      renderCalendar();
-      toast('Booked ' + date);
-    });
-  });
-}
-document.getElementById('calPrev').addEventListener('click', () => { calDate.setMonth(calDate.getMonth()-1); renderCalendar(); });
-document.getElementById('calNext').addEventListener('click', () => { calDate.setMonth(calDate.getMonth()+1); renderCalendar(); });
-
-function renderAll(){
-  renderLectures();
-  renderJournal();
-  renderCalendar();
-  toggleAdminVisibility();
-  renderAdminJournals();
-}
-function escapeHtml(str){
-  const div = document.createElement('div');
-  div.textContent = str;
-  return div.innerHTML;
-}
-
-setRole('none');
 </script>
 </body>
 </html>
