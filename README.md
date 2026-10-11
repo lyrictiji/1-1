@@ -1,8 +1,8 @@
 # Areté — Deploy to Vercel
 
 This is a static, single-file website (`index.html`). Everything — copy,
-styling, the snow animation, the sakura petals, every section — lives in
-that one file, so it's simple to host and simple to edit.
+styling, the snow animation, every section — lives in that one file, so
+it's simple to host and simple to edit.
 
 ## Option A — Vercel dashboard (no coding tools needed)
 
@@ -44,10 +44,10 @@ Open `index.html` in any text editor. Everything is in that one file:
 - Copy/text: search for the section you want (hero, My Strategy,
   Psychology, pricing, schedule, FAQ, etc.)
 - Colors: edit the CSS variables near the top (`--bg`, `--fg`, etc.)
-- Checkout links: the Student and 1-on-1 Mentorship pricing buttons link
-  to your Whop checkout pages — search for `whop.com` to find and update
-  them
-- Snow / petal animation: near the bottom of the `<script>` tag
+- Checkout links: the Free, Student, and 1-on-1 Mentorship pricing
+  buttons link to your Whop checkout pages — search for `whop.com` to
+  find and update them
+- Snow animation: near the bottom of the `<script>` tag
 
 No build step, no dependencies, no `npm install` required — it's a plain
 HTML/CSS/JS file with no backend.
